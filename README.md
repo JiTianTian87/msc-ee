@@ -15,18 +15,20 @@ The studied network is a three-phase unbalanced 23-node distribution system. The
 
 ## Repository Structure
 * `/data`: Contains all network topologies, impedance matrices, load profiles, and IBR constraints in `.csv` and `.mat` formats.
-  * `branch_data.csv`: Feeder topology and line impedance ($R/X = 0.66$).
-  * `bus_data.csv`: Conventional load distribution.
+  * `branch_data.csv`: Feeder topology and line impedance.
+  * `bus_data.csv`: load distribution.
   * `ibr_params.csv`: Specific constraints for each IBR, including apparent power ($\overline{S}_s$), phase current limits ($\overline{I}_s$), and active power bounds ($\underline{P}_s$).
   * `scenarios_config.csv`: Voltage unbalance settings for Bus 0 (Case 1: Moderate VU, Case 2: Severe VU).
-* `/src`: *(Optional: If you upload MATLAB code, describe it here)* Contains the optimization scripts implemented in MATLAB using [YALMIP / CVX] and solved by [Gurobi / Mosek].
+* `/src`: Contains the source code for power flow.
+  * `case23_longgang.m`: MATPOWER scripts for power flow calculation.
+## Usage
 
-## Optimization Model Highlights
-The provided data enables the reproduction of the following models from the paper:
-1. **Sequence-Domain Power Flow**: Utilizing dual common synchronous rotating reference frames ($DQ^+$ and $DQ^-$).
-2. **Coupled Capacity Constraints**: Jointly visualizing current limits, sequence voltage limits, and apparent power limits via polyhedral approximations ($n=16$).
-3. **Coordinated Allocation**: Solving the quadratic objective function to balance positive- and negative-sequence capacities.
+### 1. Power Flow
+To execute a standard power flow calculation on the 23-node system, run the following command in MATLAB:
 
+```matlab
+results = runpf('case23_longgang');
+```
 ## Citation
 If you find this dataset or code useful for your research, please cite our paper:
 
