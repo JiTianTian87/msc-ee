@@ -1,7 +1,7 @@
 # Unleashing The Potential of Community IBRs' Remaining Capacity For Coordinated Optimal Power Quality Management
 
 ## Overview
-This repository contains the dataset and models for the paper: **"Unleashing The Potential of Community IBRs' Remaining Capacity For Coordinated Optimal Power Quality Management in Distribution System"**. 
+This repository contains the dataset for the paper: **"Unleashing The Potential of Community IBRs' Remaining Capacity For Coordinated Optimal Power Quality Management in Distribution System"**. 
 
 The dataset represents a modified 23-node distribution network based on an actual regional grid in Longgang District, Shenzhen, China. It is designed to validate the proposed sequence-domain network model and the coordinated optimization strategy for Voltage Unbalance Mitigation (VUM).
 
@@ -9,9 +9,9 @@ The dataset represents a modified 23-node distribution network based on an actua
 The studied network is a three-phase unbalanced 23-node distribution system. The main grid is modeled as an infinite bus (Bus 0) that acts as the source of voltage unbalance. Multiple Inverter-Based Resources (IBRs) are distributed across the network. 
 
 **Key Base Values (for p.u. conversion):**
-* Base Power ($S_{base}$): [e.g., 1 MVA]
-* Base Voltage ($V_{base}$): [e.g., 10 kV]
-* System Frequency: [e.g., 50 Hz]
+* Base Power ($S_{base}$): 2.5 MVA
+* Base Voltage ($V_{base}/V_{LL,rms}$): 10 kV
+* System Frequency: 50 Hz
 
 ## Repository Structure
 * `/data`: Contains all network topologies, impedance matrices, load profiles, and IBR constraints in `.csv` and `.mat` formats.
